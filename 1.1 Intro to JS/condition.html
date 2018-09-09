@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>conditional</title>
+    <link rel="stylesheet" href="condition.css">
+  </head>
+  <body>
+    <header>
+      The Header of the File
+    </header>
+
+    <script>
+      const nameLowerCase = prompt("What is your name?").toLowerCase();
+
+      if (nameLowerCase === "richard") {
+        console.log(`Welcome ${nameLowerCase.toUpperCase()} to the show.`);
+      }
+      else {
+        console.log(`You are not Richard`);
+      }
+
+
+      const n = prompt('Enter a number')
+
+      if (n > 100 ) {
+        console.log(`${n} is greater than 100`);
+      }
+
+      else if (n <= 100 && n >= 50)
+
+      {
+                console.log(`${n} is from 50 to 100`)
+      }
+
+      else
+      {
+                console.log(`${n} is < 50`)
+      }
+
+
+    </script>
+  </body>
+</html>

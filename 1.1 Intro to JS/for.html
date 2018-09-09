@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    const m1 = prompt("enter a number");
+
+      console.log("fyi, number will always be truncated to integer")
+      m = Math.trunc(m1);
+      console.log(`m is now ${m}`)
+
+    const n1 = prompt("enter a second number bigger than the first");
+
+      console.log("fyi, number will always be truncated to integer")
+      n = Math.trunc(n1);
+      console.log(`n is ${n}`)
+
+    if (isNaN(m)) {
+     console.log(n + " is not a number");
+    } else {}
+
+    if (isNaN(n)) {
+     console.log(n + " is not a number");
+    } else {}
+
+    console.log("---------------------------------");
+
+    if (m > n) {
+      console.log(`The second number must be larger than the first so we are switching the numbers on you.`);
+      const tempvar = Math.max(m,n);
+      m = Math.min(m,n);
+      n = tempvar;
+      console.log(`m is now ${m}`)
+      console.log(`n is now ${n}`)
+      console.log("---------------------------------");
+    }
+
+    for (m; m <= n; m = m + 1) {
+
+      if (m % 3 == 0 && m % 5 == 0 ) {
+        console.log(`FIZZ BUZZ - the output of  ${m} mod 3 is zero and ${m} mod 5 is zero`);
+      }
+
+      else if (m % 3 == 0 && m % 5 !==0) {
+        console.log(`FIZZ - the number ${m} mod 3 is zero`);
+      }
+
+      else if (m % 5 == 0) {
+        console.log(`BUZZ - the number ${m} mod 5 is zero`);
+      }
+
+      else {
+        console.log(m);
+      }
+    }
+
+        console.log("----------end of script ------------");
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    const computerChoice = "rock";
+    const userChoice = prompt("Choose rock, paper or scissors")
+
+if (userChoice.typeOf == String) {
+
+
+    if (userChoice === computerChoice) {
+      console.log(`userChoice of ${userChoice} is a tie`);
+    } else if (userChoice === "paper") {
+      console.log('you win');
+    } else  {
+      console.log('you lose');
+    }
+}
+
+else {
+
+  console.log("not a string");
+
+}
+    </script>
+  </body>
+</html>
