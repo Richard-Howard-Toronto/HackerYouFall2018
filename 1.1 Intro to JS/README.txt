@@ -1,0 +1,1 @@
+README.TXTProbably the only interesting file is FOR.JS, which does the longer exercise at the end of the class, plus adds in a couple of validations:1. You are prompted to pick the ending numbers2. The program makes sure the numbers are in the right order3. Truncates the numbers if someone enters 3.153423532, it is 34. Alerts if you have enters NaN
