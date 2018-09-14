@@ -2,14 +2,14 @@ function countLetter(array,letter) {
   let count = 0;
   for (var i = 0; i < array.length; i++) {
 
-    if (array[i] === ' ') {
+    if (array[i] === ' ' || array[i] === ',') {
       console.log('');
     }
 
     else {
 
     if (array[i] === letter) {
-      console.log(`${array[i]} === ${letter}`);
+      console.log(`${array[i]} in array is equal to the letter ${letter}`);
       count = count + 1;
     } else {
       if (array[i] !== letter) {
@@ -21,4 +21,4 @@ function countLetter(array,letter) {
 }
 }
 
-countLetter("Write a function that that accepts two string arguments, a single letter... letter within the larger string, maybe an o, and another o",'o')
+countLetter("Write an o, and another o",'o')
