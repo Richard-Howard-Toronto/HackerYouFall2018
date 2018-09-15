@@ -5,15 +5,18 @@ function modFunction(num) {
     let array = [];
 
     while (mod > 0 && mod <= num) {
-      if (num % mod == 0 ) {
+      if (num % mod == 0 && num - mod == 0 ) {
         array.push(mod);
-        console.log(`yes ${num} mod ${mod} is zero`);
-        } else {
-
+        console.log(`if number and mod are equal then result is zero so ${num} mod ${mod} is zero.`);
+      } else if (num % mod == 0) {
+        array.push(mod);
+        console.log(`${num} mod ${mod} is zero`);
+      } else {
+          // do nothing (have a kit kat)
         } // end of for
     mod--;
   } //end of while
   array.sort(function(a, b){return a-b});
-  console.log(array);
+  console.log(array.toString());
 }
-modFunction(99)
+modFunction(19832530)
