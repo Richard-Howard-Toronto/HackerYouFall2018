@@ -34,7 +34,6 @@
 
 
         // the object is farm
-
         for (let attributes in farm) {
           if (typeof farm[attributes] === 'number') {
             console.log(`Q2: There are ${farm[attributes]} ${attributes}`);
