@@ -1,16 +1,28 @@
 
 function numStringReverse(num) {
 
-  let array = num.split('');
-  let reverseArray = [];
+  let array = num.slice('');
 
-  for (var i = 0; i < array.length; i++) {
-
+  for (var i = array.length-1; i >= 0; i--) {
     console.log(array[i]);
-    reverseArray.push(array[i]);
+    let reverseArray = [];
+  
 
   }
 
+
+
+
+  // let reverseArray = [];
+  //
+  // for (var i = 0; i < array.length; i++) {
+  //
+  //   console.log(array[i]);
+  //   reverseArray.push(array[i]);
+  //   console.log(reverseArray[3]);
+
+  // }
+
 }
 
-numStringReverse('1234')
+numStringReverse('12345678')

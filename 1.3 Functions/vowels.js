@@ -14,9 +14,8 @@
 
       char = char.toLowerCase();
 
-
       if (char.length > 1) {
-        return 'string is more than one character so who knows if it is a vowel '
+        return 'string is more than one character so who knows if it is a vowel'
       } else {
         if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
           return true;
@@ -26,7 +25,7 @@
       }
     }
 
-    console.log(`is it a vowel? ${charIsVowel(2)}`)
+    console.log(`is it a vowel? ${charIsVowel('u')}`)
 
 
     // once done, create seperate if statements for the following and log "yes it is a vowel / no it isn't a vowel"
