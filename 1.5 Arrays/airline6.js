@@ -43,49 +43,36 @@
   }
 
 
-let flightCount = 0;
+
 
   function howmanyACFlights() {
 
+      let flightCount = 0;
+      let passengerCount = 0;
+
       for (var airline in flights) {
 
-        let str=(airline);
+        let str=airline;
 
         if (str.substring(0, 2)==='AC') {
 
             flightCount+=1;
 
-            function countACpassengers() {
+            passengerCount += passengers;
 
-              let passengerCount = 0;
-
-              for (var airline in flights) {
-
-                  let innerObject = flights[airline];
-
-                      if (innerObject.from === 'YYZ') {
-                      passengerCount += innerObject.passengers;
-                      }
-
-              }
-              console.log(`There are a total of ${passengerCount} passengers leaving from YYZ on AC`);
+            console.log(`There are a total of ${passengerCount} passengers leaving from YYZ on AC`);
 
             } // end of inner function
 
-            countACpassengers();
         }
 
       }
 
-      console.log(`There are ${flightCount} AC flights`);
-  }
+
+
 
     howmanyACFlights();
 
 
 
   // Challenge #6 — How many passengers are flying Air Canada and taking off from Toronto?
-  // Challenge #7 — How many passengers go through the Hamilton airport? (YHM)
-  // Challenge #8 — What is the average number of people who take a flight on each of the airlines?
-
-  // Good luck!

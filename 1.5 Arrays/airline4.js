@@ -42,27 +42,29 @@
     }
   }
 
-//
-// console.log(flights)
-// console.log(flights.AC123)
-// console.log(flights.AC123.passengers)
 
-  function passengersLandingInBoston() {
+
+  function passengersGoingThroughToronto() {
+
+      let passengerCount = 0;
+      let planeCount = 0;
+
+      console.log(flights);
 
       for (var airline in flights) {
 
           let innerObject = flights[airline];
-          console.log(innerObject);
 
-          let passengerCount = 0;
-              if (innerObject.to === 'BOS') {
+              if (innerObject.from === 'YYZ' || innerObject.to === 'YYZ') {
               passengerCount += innerObject.passengers;
-              console.log(passengerCount);
+              planeCount += 1;
+
               }
       }
+      console.log(`There are ${passengerCount} passengers on ${planeCount} planes going through Toronto.`);
   }
 
-    passengersLandingInBoston();
+    passengersGoingThroughToronto();
 
 
   // Challenge #4 — how many air planes will go through Toronto? (YYZ)

@@ -1,4 +1,4 @@
-
+//NOT COMPLETE
   var flights = {
     AC123: {
       passengers: 43,
@@ -43,24 +43,25 @@
   }
 
 
-let flightCount = 0;
+  function goThroughYHM() {
 
-  function howmanyACFlights() {
+      let passengerCount = 0;
 
       for (var airline in flights) {
 
-        let str=(airline)
+          let innerObject = flights[airline];
 
-        if (str.substring(0, 2)==='AC') {
+              if (innerObject.to === 'YHM' || innerObject.from === 'YHM') {
+              passengerCount += innerObject.passengers;
 
-            flightCount+=1;
-
-        }
+              }
 
       }
-      console.log(`There are ${flightCount} AC flights`);
+
+      console.log(`How many passengers go through YHM airport? ${passengerCount}`);
   }
 
-    howmanyACFlights();
+    goThroughYHM();
 
-  // Challenge #5 — How many Air Canada flights are there? (HINT: Looks up the substring method)
+
+  // how many passengers go through YHM airport

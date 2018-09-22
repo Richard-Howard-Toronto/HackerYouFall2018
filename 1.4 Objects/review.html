@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>REVIEW</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    const weeksWorkout = {};
+
+    function addWorkout(day,workout, minutes) {
+      console.log(day,workout,minutes);
+      weeksWorkout[day] = {
+        workout: workout,
+        time: minutes,
+      }
+      addWorkout('viernes','stairmaster','60');
+    }
+
+    addWorkout('sunday','stairmaster','30');
+    addWorkout('monday','lifts','60');
+    addWorkout('tuesday','run','620');
+    addWorkout('wednesday','swim','160');
+    console.log(weeksWorkout);
+
+
+  let totalTime = 0;
+
+    for (let day in weeksWorkout) {
+      // console.log(weeksWorkout[day]);
+      totalTime = totalTime + weeksWorkout[day].time;
+      console.log(totalTime);
+      }
+
+
+    </script>
+
+  </body>
+</html>
