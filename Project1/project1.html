@@ -1,0 +1,43 @@
+<!-- // Play rock, paper scissors against the computer that keeps going until someone wins 5 games.
+//
+// It should take a user input of ‘rock’, ‘paper’, or ‘scissors’ as a parameter
+// The Computer should randomly draw rock, paper or scissors
+// You need to keep count of wins, losses and ties until someone wins.
+// You need to validate the input from the user to make sure they don't type in "BOMB" or "123", also be aware of capitalization of "Scissors" etc...
+// Bonus if you can look ahead to create a simple scoreboard with jQuery -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Project 1</title>
+  </head>
+  <body>
+
+    <h1 id="favDrink">favDrink</h1>
+
+    <script>
+    prompt("Please enter your name");
+    var text;
+    var favDrink = prompt("What's your favorite cocktail drink?");
+    switch(favDrink) {
+        case "Martini":
+            text = "Excellent choice! Martini is good for your soul.";
+            break;
+        case "Daiquiri":
+            text = "Daiquiri is my favorite too!";
+            break;
+        case "Cosmopolitan":
+            text = "Really? Are you sure the Cosmopolitan is your favorite?";
+            break;
+        default:
+            text = "I have never heard of that one..";
+            break;
+
+            var el = document.getElementById('text');
+            el.textContent = text;
+
+    }
+    </script>
+  </body>
+</html>
