@@ -1,0 +1,14 @@
+body {
+  background-color: whitesmoke;
+}
+
+h1 {
+  background-color: lightgreen;
+}
+
+#computerPulls {
+  background-color: peachpuff;
+  padding: 20px;
+  border: 20px;
+  margin: 20px;
+}

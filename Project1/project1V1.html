@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet/project1.css">
+    <title></title>
+  </head>
+<body>
+
+<h1>Rock, Paper or Scissors</h1>
+
+
+
+<div id="sapien">
+    <button onclick="sapienDraws()">Sapiens! Click here to start game.</button>
+</div>
+
+<div id="computer">
+    <button onclick="computerDraws()">Click to get computer to generate random number</button>
+</div>
+
+<h2 id="sapienDraws">Sapien Draws...</h2>
+
+<h2 id="randomNumber">computer generated random #</h2>
+
+<h2 id="computerPulls"></h2>
+
+<button onclick="myFunction()">Start Rock, Paper, Scissors Game</button>
+
+<h2 id="id1">Result Output Here</h2>
+
+<script>
+
+function sapienDraws() {
+
+  var choiceLowercase = prompt("Please enter Rock, Paper or Scissors");
+
+  let choiceUppercase = choiceLowercase.toUpperCase();
+
+  var elDrawSapien = document.getElementById('sapienDraws');
+  elDrawSapien.textContent = choiceUppercase;
+
+}
+
+
+
+function computerDraws() {
+
+  randomNumber = Math.random()*10;
+
+  if (randomNumber > 0 && randomNumber < 3.3333) {
+    computerPulls = "rock"
+  } else if (randomNumber >= 3.333 && randomNumber < 6.666) {
+    computerPulls = "paper"
+  } else {
+    computerPulls = "scissors"
+  }
+
+  var el = document.getElementById('randomNumber');
+  el.textContent = randomNumber;
+
+  var elDraw = document.getElementById('computerPulls');
+  elDraw.textContent = computerPulls;
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>
