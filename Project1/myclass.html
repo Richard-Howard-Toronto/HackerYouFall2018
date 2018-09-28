@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>class demo</title>
+  <style>
+  div, span {
+    width: 120px;
+    height: 40px;
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    background-color: #EEEEEE;
+  }
+  h4 {
+    text-align: center;
+    padding: 20px;
+    border: 30px;
+    margin: 40px;
+    width: 50%;
+    border-radius: 30px;
+    border: solid blue;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+  <div id="myClass">
+      <button onclick="myClass()">Add red border.</button>
+  </div>
+  <div id="notMe">
+      <button onclick="notMe()">Add blue border</button>
+  </div>
+  <div id="toSpanish">
+      <button onclick="toSpanish()">toSpanish Click.</button>
+  </div>
+  <div id="toEnglish">
+      <button onclick="toEnglish()">toEnglish Click.</button>
+  </div>
+
+<div class="notMe">div class="notMe"</div>
+<div class="myClass">div class="myClass"</div>
+<span class="myClass">span class="myClass"</span>
+<div class="">
+  <h4 class="languageClass">We present the best projects</h4>
+</div>
+<script>
+
+
+
+
+function myClass() {
+  $( ".myClass" ).css( "border", "3px solid red" );
+}
+
+function notMe() {
+  $( ".notMe" ).css( "border", "5px dotted blue" );
+}
+
+function toSpanish() {
+  $(".languageClass").text("Les presento los mejores proyectos");
+}
+
+function toEnglish() {
+  $(".languageClass").text("We present the best projects ....");
+}
+
+
+
+</script>
+
+</body>
+</html>

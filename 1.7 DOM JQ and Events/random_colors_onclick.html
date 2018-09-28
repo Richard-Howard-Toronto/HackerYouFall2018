@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Colours!</title>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <div class="refreshButton">
+    <button onclick="reFresh()">TO REFRESH PAGE - Document.location()</button>
+  </div>
+
+  <div class="grid">
+
+    <span><div class="button">
+      <button onclick="pickColor()">Click me to put color into the boxes</button>
+    </div></span>
+    <span><div class="button">
+      <button onclick="pickColor()">Click me to put color into the boxes</button>
+    </div></span>
+    <span><div class="button">
+      <button onclick="pickColor()">Click me to put color into the boxes</button>
+    </div></span>
+
+  </div>
+
+  <footer class="footer1">Copyright 1964</footer>
+
+</div>
+
+<!-- end of wrapper -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+
+      function reFresh() {
+         location.reload();
+      }
+
+      function pickColor() {
+
+          const colours = ["red","orange","yellow","green","blue","indigo","violet"];
+          let max = colours.length-1;
+          let min = 0;
+          let index =  Math.floor(Math.random() * (max - min + 1)) + min;
+
+            $("span").text(`you picked ${colours[index]} at index ${index}`);
+
+                if (index===0) {
+                    $('span').css('background', '#c0392b');
+                } else if (index===1) {
+                    $('span').css('background', '#d35400');
+                } else if (index===2) {
+                    $('span').css('background', '#f1c40f');
+                } else if (index===3) {
+                    $('span').css('background', '#1abc9c');
+                } else if (index===4) {
+                    $('span').css('background', '#2980b9');
+                } else if (index===5) {
+                    $('span').css('background', '#34495e');
+                } else {
+                    $('span').css('background', '#9b59b6');
+                } // end of if
+
+        // for fun to make the colors fade or change
+
+            $('span').fadeOut(2000);
+
+            $('footer.footer1').text(`colors will now fade away`);
+
+      } // end of function
+
+
+
+
+  </script>
+
+  <style>
+    body {
+      margin:0;
+    }
+
+    .wrapper {
+      background-color: peachpuff;
+    }
+    .grid span {
+      display: block;
+      width:200px;
+      height:200px;
+      border:1px solid rgba(0,0,0,0.03);
+      float: left;
+      -webkit-transition:all 0.1s;
+      border: solid 1px;
+      background: white;
+      margin-left: 20px;
+    }
+
+    .refreshButton, .button {
+      padding: 20px;
+      border: 20px;
+      margin: 20px;
+    }
+
+    footer {
+      position:fixed;
+      bottom: 5px;
+      font-style: italic;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* .grid span.red { background: #c0392b;}
+    .grid span.orange { background: #d35400;}
+    .grid span.yellow { background: #f1c40f;}
+    .grid span.green { background: #1abc9c;}
+    .grid span.blue { background: #2980b9;}
+    .grid span.indigo { background: #34495e;}
+    .grid span.violet { background: #9b59b6;} */
+
+  </style>
+</body>
+</html>
