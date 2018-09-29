@@ -22,12 +22,14 @@ const student = {
 
       if (minutes >= 1) {
         student.grades = student.grades + Math.round((minutes/60 * 5));
-        if (student.energy === 0 ) {
-            student.grades = 0;
+        student.energy = Math.round(student.energy - (minutes/60 * 2));
+        if (student.energy <= 0 ) {
+          return console.log('you are out of energy');
         } else {
-            student.energy = Math.round(student.energy - (minutes/60 * 2));
+            student.grades = student.grades * 0.9;
+
+            console.log(`your grade is ${student.grades} and your energy is ${student.energy}`);
         } // end of else
-          console.log(`your grade is ${student.grades} and your energy is ${student.energy}`);
       } // end of if
       else {
         console.log(`you must study at least one minute to see any result`);
@@ -53,7 +55,11 @@ const uniform = {
 student.updateEnergy();
 student.updateEquipment('fishing rod');
 uniform.changeUniform('green',4,'suede');
-student.timeStudied(100);
+student.timeStudied(120);
+student.timeStudied(120);
+student.timeStudied(21120);
+student.timeStudied(21120);
+
 
 // equipment (array).
 // energy (number).
@@ -71,10 +77,12 @@ const myBasket = {
     apples: 1,
     increment: function() {
         this.apples += 1
+        console.log(`adding apples for a total of: ${myBasket.apples}`);
+
     }
 }
 myBasket.apples;
 myBasket.increment();
+myBasket.increment();
+myBasket.increment();
 myBasket.apples;
-
-console.log(myBasket.apples);
