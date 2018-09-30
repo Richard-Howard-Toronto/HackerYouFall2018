@@ -2,18 +2,56 @@ body {
   background-color: whitesmoke;
 }
 
-h1  {
-  font-size: 25px;
+h1 {
+  background-color: lightgrey;
+  text-align: center;
+}
+
+h2 {
+  background-color: lightgrey;
+  text-align: center;
 }
 
 div {
   text-align: center;
 }
 
-.button {
+div.button {
   padding: 20px;
   border: 20px;
   margin: 20px;
   border-radius: 20px;
   background-color: lightblue;
+}
+
+div.button:hover {
+  background-color: green;
+}
+
+.buttonClass {
+  font-size: 20px;
+}
+
+div.center {
+  display: flex;
+  width: 90%;
+}
+
+.message_container {
+  /* border: solid; */
+  display: flex;
+  width: 50%;
+}
+
+.message {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 20px;
+  border: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 50px;
+  border-radius: 100px;
+  background-color: lightgreen;
+  color: black;
 }

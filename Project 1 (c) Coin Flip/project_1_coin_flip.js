@@ -57,10 +57,10 @@ function functionName() {
     console.log(`max tails is ${Math.max(...storeElementArrayTails)}`);
     console.log(`min tails is ${Math.min(...storeElementArrayTails)}`);
 
-    $('span').text(`The results ${Math.min(...storeElementArrayTails)}`);
-    $('span').text(`The results ${Math.min(...storeElementArrayHeads)}`);
-    $('span').text(`The results ${Math.min(...storeElementArrayTails)}`);
-    $('span').text(`The results ${Math.min(...storeElementArrayTails)}`);
+    $('span#output1').text(`: ${Math.max(...storeElementArrayHeads)}`);
+    $('span#output2').text(`: ${Math.min(...storeElementArrayHeads)}`);
+    $('span#output3').text(`: ${Math.max(...storeElementArrayTails)}`);
+    $('span#output4').text(`: ${Math.min(...storeElementArrayTails)}`);
 }
 
 function flipManyGroups(num) {

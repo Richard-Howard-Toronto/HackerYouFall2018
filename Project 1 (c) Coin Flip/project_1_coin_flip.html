@@ -8,25 +8,35 @@
   </head>
   <body>
     <h1>This project uses a random number generator to generate a head or a tail. It counts the heads and tails and assigns them to an array.</h1>
+    <h2>The heads are collected in one array and the tails in another.  They are then pushed to create an array of 100 pairs.</h2>
+    <h2>This is repeated 100,000 times and the result of the maximum is stored in a new array.</h2>
+    <h2>The maximum and minimum of the Head and Tail are displayed in the round green boxes below.</h2>
 
 
     <div class="button">
-      <button onclick="reFresh()">Click to calculate heads and tails (reloads everything using the document.reload())</button>
+      <button class="buttonClass" onclick="reFresh()">Click to calculate heads and tails (reloads everything using the document.reload())</button>
     </div>
 
-    <div class="message">Max Heads
-      <span id="output1">output</span>
-    </div>
-    <div class="message">Max Heads
-      <span id="output2">output</span>
-    </div>
-    <div class="message">Max Heads
-      <span id="output3">output</span>
-    </div>
-    <div class="message">Max Heads
-      <span id="output4">output</span>
-    </div>
+    <div class="center">
 
+        <div class="message_container">
+        
+              <div class="message">Max Heads
+                <span id="output1">output</span>
+              </div>
+              <div class="message">Min Heads
+                <span id="output2">output</span>
+              </div>
+              <div class="message">Max Tails
+                <span id="output3">output</span>
+              </div>
+              <div class="message">Min Tails
+                <span id="output4">output</span>
+              </div>
+
+        </div>
+
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="project_1_coin_flip.js"></script>
   </body>
