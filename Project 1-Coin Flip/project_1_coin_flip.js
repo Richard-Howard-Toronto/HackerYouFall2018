@@ -44,8 +44,28 @@ function flipCount() {
 
     arrayHeadsTails.push(countHeads,countTails);
     arrayHeadsTailsAll.push(arrayHeadsTails);
-    console.log(arrayHeadsTailsAll);
+
 }
+
+let storeElementArrayHeads = [];
+let storeElementArrayTails = [];
+
+function functionName() {
+    arrayHeadsTailsAll.forEach(function(element) {
+    storeElementArrayHeads.push(element[0]);
+    storeElementArrayTails.push(element[1]);
+
+    console.log(`100 flips: ${element[0]},${element[1]} generates heads and tails respectively`);
+    });
+
+    console.log(`max heads is ${Math.max(...storeElementArrayHeads)}`);
+    console.log(`min heads is ${Math.min(...storeElementArrayHeads)}`);
+    console.log(`max tails is ${Math.max(...storeElementArrayTails)}`);
+    console.log(`min tails is ${Math.min(...storeElementArrayTails)}`);
+}
+
+
+
 
 function flipManyGroups(num) {
 
@@ -55,4 +75,6 @@ function flipManyGroups(num) {
   }
 }
 
-flipManyGroups(5)
+flipManyGroups(50)
+
+functionName();
