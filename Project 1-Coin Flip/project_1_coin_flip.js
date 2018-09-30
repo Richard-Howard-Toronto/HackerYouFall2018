@@ -17,29 +17,42 @@
 
 // generate a heads or a tails
 
+let arrayHeadsTailsAll = []; //
 
-let result = '';
-let x = 0;
-let flipArrayHeads = [];
-let flipArrayTails = [];
-let arrayHeadsTails = [];
-let maxCount = 100;
+function flipCount() {
 
-let countHeads = 0;
-let countTails = 0;
+    let result = '';
+    let flipArrayHeads = []; // holds all x > 0.5
+    let flipArrayTails = []; // holds all x < 0.5
+    let arrayHeadsTails = []; // holds a pair of x's
+    let maxCount = 100; // the number of flips to get pair
+    let countHeads = 0;
+    let countTails = 0;
 
-for (var counter = 0; counter < maxCount; counter++) {
+    for (var counter = 0; counter < maxCount; counter++) {
 
-  x = Math.random();
+      let x = Math.random();
 
-  if (x >= 0 && x <= 0.5) {
-    flipArrayHeads.push(x);
-    countHeads++;
-  } else {
-    flipArrayTails.push(x);
-    countTails++;
+        if (x >= 0 && x <= 0.5) {
+          flipArrayHeads.push(x);
+          countHeads++;
+        } else {
+          flipArrayTails.push(x);
+          countTails++;
+        }
+    }
+
+    arrayHeadsTails.push(countHeads,countTails);
+    arrayHeadsTailsAll.push(arrayHeadsTails);
+    console.log(arrayHeadsTailsAll);
+}
+
+function flipManyGroups(num) {
+
+  for (var i = 0;
+    i < num; i++) {
+    flipCount(num);
   }
 }
 
-arrayHeadsTails.push(countHeads,countTails);
-console.log(arrayHeadsTails);
+flipManyGroups(5)
