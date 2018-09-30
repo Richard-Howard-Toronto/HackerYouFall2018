@@ -17,6 +17,7 @@
 
 // generate a heads or a tails
 
+let globalcount = 0;
 let arrayHeadsTailsAll = []; //
 
 function flipCount() {
@@ -25,7 +26,7 @@ function flipCount() {
     let flipArrayHeads = []; // holds all x > 0.5
     let flipArrayTails = []; // holds all x < 0.5
     let arrayHeadsTails = []; // holds a pair of x's
-    let maxCount = 100; // the number of flips to get pair
+    let maxCount = 100; // the number of flips to get an array of 100 pairs
     let countHeads = 0;
     let countTails = 0;
 
@@ -40,32 +41,35 @@ function flipCount() {
           flipArrayTails.push(x);
           countTails++;
         }
+
     }
 
     arrayHeadsTails.push(countHeads,countTails);
     arrayHeadsTailsAll.push(arrayHeadsTails);
 
+
 }
+
 
 let storeElementArrayHeads = [];
 let storeElementArrayTails = [];
 
 function functionName() {
+
     arrayHeadsTailsAll.forEach(function(element) {
     storeElementArrayHeads.push(element[0]);
     storeElementArrayTails.push(element[1]);
 
-    console.log(`100 flips: ${element[0]},${element[1]} generates heads and tails respectively`);
+    // console.log(`100 flips: ${element[0]},${element[1]} generates heads and tails respectively`);
     });
 
     console.log(`max heads is ${Math.max(...storeElementArrayHeads)}`);
     console.log(`min heads is ${Math.min(...storeElementArrayHeads)}`);
     console.log(`max tails is ${Math.max(...storeElementArrayTails)}`);
     console.log(`min tails is ${Math.min(...storeElementArrayTails)}`);
+
+
 }
-
-
-
 
 function flipManyGroups(num) {
 
@@ -75,6 +79,6 @@ function flipManyGroups(num) {
   }
 }
 
-flipManyGroups(50)
+flipManyGroups(100000)
 
 functionName();
