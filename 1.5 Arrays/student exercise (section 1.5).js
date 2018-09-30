@@ -3,9 +3,12 @@
 
 const student = {
 
+
+
   equipment: ['books','pens','money'],
   energy: 100,
   grades: 0,
+  cost_of_energy: 10,
 
   updateEnergy: function() {
        student.energy = 200;
@@ -23,17 +26,22 @@ const student = {
       if (minutes >= 1) {
         student.grades = student.grades + Math.round((minutes/60 * 5));
         student.energy = Math.round(student.energy - (minutes/60 * 2));
+
+
+
         if (student.energy <= 0 ) {
           return console.log('you are out of energy');
         } else {
-            student.grades = student.grades * 0.9;
+            student.grades = Math.round(student.grades * 0.9);
 
             console.log(`your grade is ${student.grades} and your energy is ${student.energy}`);
         } // end of else
       } // end of if
       else {
         console.log(`you must study at least one minute to see any result`);
+
       }
+        console.log(`you can only study for ${Math.round(student.energy / (minutes / 60 *  2))} hours more otherwise you will be out of energy and need to replenish`);
   } // end of method
 }
 
@@ -52,13 +60,13 @@ const uniform = {
 
 }
 
-student.updateEnergy();
 student.updateEquipment('fishing rod');
 uniform.changeUniform('green',4,'suede');
 student.timeStudied(120);
 student.timeStudied(120);
-student.timeStudied(21120);
-student.timeStudied(21120);
+student.timeStudied(210);
+student.timeStudied(12*700);
+
 
 
 // equipment (array).
@@ -72,17 +80,3 @@ student.timeStudied(21120);
 // for every hour that you study, your grades go up by 5% (example: if your grade is 60, and you study an hour, your grade will be 65) .
 // for every hour you study, your energy goes down by 2. (Bonus: if your energy goes below 0, your grades go down 10%)
 // what happens if you use the update uniform method to change something that doesn't exist in the uniform object?
-
-const myBasket = {
-    apples: 1,
-    increment: function() {
-        this.apples += 1
-        console.log(`adding apples for a total of: ${myBasket.apples}`);
-
-    }
-}
-myBasket.apples;
-myBasket.increment();
-myBasket.increment();
-myBasket.increment();
-myBasket.apples;

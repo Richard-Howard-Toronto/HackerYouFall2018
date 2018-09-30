@@ -7,19 +7,63 @@
 </head>
 <body>
   <div class="container">
-    <h1>jQuery To Do List App</h1>
+    <h1>Secret Loblaws Shopping list</h1>
     <form>
-      <label for="item">Add an item:</label>
-      <input class="" type="text" id="item" placeholder="Do JavaScript homework...">
+      <label for="item">Item(s):</label>
+      <input class="" type="text" id="item" placeholder="add item">
       <input type="submit" value="Add Item">
     </form>
-    <ul>
+    <ul class="toDoList">
       <!-- To do items get added dynamically here -->
     </ul>
   </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+<script type="text/javascript">
+
+// callback, the second function, inside
+
+  $(function() {
+    $('form').on('submit', function (event) {
+      event.preventDefault();
+
+      const input = $('#item');
+
+      const item = $('#item').val(); // to grab the value of item
+
+      // having grabbed the value, then clear out
+
+      input.val('');
+
+      console.log(item); // update using APPEND in html
+      $('ul').append(`<li><span class="check todo"></span>${item}</li>`); // wrap in a template string
+
+      // pass in an argument to the val method
+
+      //val(argument)
+    })
+
+    // chaining: find 'check', then run the next method, the toggle class and applying this to what was found.
+
+    // after 'click' we put in X so when we click....
+
+    $('.toDoList').on('click', 'li', function () {
+      console.log('clicked!')
+      $(this)
+        .find('.check')
+          .toggleClass('todo');
+      $(this)
+        .find('.check')
+          .toggleClass('done');
+    });
+
+    // find is a method in jq and checks in all the children
+
+  });
+
+</script>
 
 </body>
 </html>

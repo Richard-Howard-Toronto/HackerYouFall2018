@@ -10,24 +10,15 @@
 </head>
 <body>
   <div class="wrapper">
-    <form action="#" class="wrapper">
-      <label for="goal">The max # before we stop this game:</label>
-      <div class="">
-        <input id="submit" type="submit" value="click to set goal->">
-        <input type="text" id="goal">
-      </div>
-    </form>
-
-    <div class="formnote">
-      once you click...
-    </div>
-
     <h1>Count: <span class="counter">0</span></h1>
-    <button id="subtract"><i class="fa fa-minus"></i><span>Subtract this</span></button>
-    <button id="add"><i class="fa fa-plus"></i><span>Add this</span></button>
-    <button id="multiply"><i class="#"></i><span>Multiply this</span></button>
+    <button id="subtract"><i class="fa fa-minus"></i><span>Subtract</span></button>
+    <button id="add"><i class="fa fa-plus"></i><span>Add</span></button>
   </div>
-
+  <form class="wrapper">
+    <label for="goal">Goal:</label>
+    <input type="text" id="goal">
+    <input type="submit" value="set">
+  </form>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="script.js"></script>

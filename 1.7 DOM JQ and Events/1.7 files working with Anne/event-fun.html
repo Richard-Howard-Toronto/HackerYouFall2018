@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>EVENT FUN</title>
+    <style media="screen">
+      .box {
+        width: 400px;
+        height: 400px;
+        background-color: peachpuff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='box'>
+      the box
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+//first arg: event that is happening
+// second: a function
+
+    $(function() {
+      console.log('document is ready!');
+
+      const getBoxMessage = () => {
+        console.log('i am orange');
+      }
+
+      // getBoxMessage is the called back
+
+      $('.box').on('click', getBoxMessage)
+
+    });
+
+    </script>
+
+  </body>
+</html>

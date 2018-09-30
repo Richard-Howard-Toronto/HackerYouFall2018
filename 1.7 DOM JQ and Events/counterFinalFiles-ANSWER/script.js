@@ -21,27 +21,29 @@ $(document).ready(() => {
   // when user clicks on the multiply button, muliply the number from the counter by itself
   // link the counter variable to the counter HTML
   $('#multiply').on('click', () => {
-    if (counter < 100000) {
       counter = counter * counter;
       $('.counter').text(counter);
       checkGoal(counter);
-    } else {
-      counter = 0;
-    }
-
   });
 
   let goal;
 
-  $('form').on('submit', (e) => {
-    e.preventDefault();
+  // the event  is attached to FORM
+
+  // the form when you click is trying to send / get info ... we don't want this to have the page refresh.  Instead, you want to prvent the default action of the form from happening.  To do this we use PREVENT DEFAULT
+
+  // forms ony accept string
+
+  $('form').on('submit', (event) => {
+    event.preventDefault(); // you just have to know this!!!!
     goal = parseInt($('input#goal').val());
     $('input[type=submit]').addClass('submitted');
     $('input[type=text]').addClass('set');
+  
   });
 
-  const checkGoal = (current) => {
-    if (current === goal) {
+  const checkGoal = (counter) => {
+    if (counter === goal) {
       alert(`You met your goal of ${goal}`);
       $('input[type=submit]').removeClass('submitted');
       $('input[type=text]').removeClass('set').val('');

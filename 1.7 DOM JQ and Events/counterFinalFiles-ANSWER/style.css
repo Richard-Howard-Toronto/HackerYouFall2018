@@ -4,18 +4,43 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 body, input {
   font-family: 'Roboto Mono', monospace;
+  background-image: url("joke.jpg");
+  background-repeat: no-repeat;
+  background-color: #cccccc;
+  height: 100%;
+  width: 100%;
 }
+
 .wrapper {
   background: lightslategrey;
   margin: 100px auto 0;
   padding: 50px;
-  width: 50%;
+  width: 80%;
   text-align: center;
 }
-h1, label, input {
+h1, {
   font-size: 50px;
   font-weight: bold;
 }
+
+label, input {
+  font-size: 20px;
+}
+
+input {
+  border: solid;
+}
+
+#submit {
+  font-size: 10px;
+  color: white;
+  background-color: black;
+}
+
+#submit:hover {
+  color: yellow;
+}
+
 button {
   font-size: 20px;
   border: none;
