@@ -7,10 +7,21 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  background-color: lightgrey;
+h2:nth-child(2) {
+  background-color: rgb(66, 134, 244);
   text-align: center;
 }
+
+h2:nth-child(3) {
+  background-color: rgb(65, 205, 244);
+  text-align: center;
+}
+
+h2:nth-child(4) {
+  background-color: rgb(65, 244, 226);
+  text-align: center;
+}
+
 
 div {
   text-align: center;
