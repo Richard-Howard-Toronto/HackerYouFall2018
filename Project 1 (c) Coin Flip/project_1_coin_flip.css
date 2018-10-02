@@ -1,5 +1,7 @@
-body {
-  background-color: whitesmoke;
+html, body {
+    margin: 5;
+    height: 100%;
+    background-image: url("picture166.png");
 }
 
 h1 {
@@ -65,4 +67,12 @@ div.center {
   border-radius: 100px;
   background-color: lightgreen;
   color: black;
+}
+
+footer {
+   position: fixed;
+   bottom: 5px;
+   background-color: red;
+   color: white;
+   text-align: center;
 }
