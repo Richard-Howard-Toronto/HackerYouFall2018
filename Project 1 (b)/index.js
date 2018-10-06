@@ -1,4 +1,15 @@
-var welcomeContent = "The rules are simple.  The rock represents evolution.  Evolution always wins, except for paper which represents the human (Anthropecene) impact on the planet and the scissors represent the ability of the planet to recover from human behavior because scissors cuts paper. Pick your choice.";
+var welcomeContent = "The rules are simple.  The rock represents evolution.  Evolution always wins, except for paper which represents the human (Anthropecene) impact on the planet and the scissors represent the ability of the planet to recover from human behavior because scissors cuts paper. You can try your luck as often as you want, clicking each bubble below. Reset if you want.  Check console.log for output.";
+
+
+var rock = document.getElementById('rock');
+rock.style.visibility = 'hidden';
+
+var paper = document.getElementById('paper');
+paper.style.visibility = 'hidden';
+
+var scissors = document.getElementById('scissors');
+scissors.style.visibility = 'hidden';
+
 
 function displayRules() {
   var el = document.getElementById('displayRules');
@@ -6,7 +17,6 @@ function displayRules() {
   var button = document.getElementById('button');
   button.style.visibility = 'hidden';
 }
-
 
 
 function button2() {
@@ -75,6 +85,10 @@ function runGameRock() {
     }
   }
   compare();
+
+  var rock = document.getElementById('rock');
+  rock.style.visibility = 'visible';
+
 }
 
 
@@ -119,6 +133,9 @@ function runGamePaper() {
     }
   }
   compare();
+
+  var paper = document.getElementById('paper');
+  paper.style.visibility = 'visible';
 }
 
 
@@ -163,6 +180,9 @@ function runGameScissors() {
     }
   }
   compare();
+
+  var scissors = document.getElementById('scissors');
+  scissors.style.visibility = 'visible';
 }
 
 
