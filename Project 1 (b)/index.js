@@ -1,4 +1,11 @@
-var welcomeContent = "The rules are simple.  The rock represents evolution.  Evolution always wins, except for paper which represents the human (Anthropecene) impact on the planet and the scissors represent the ability of the planet to recover from human behavior because scissors cuts paper. You can try your luck as often as you want, clicking each bubble below. Reset if you want.  Check console.log for output.";
+var windowHeight = window.innerWidth;
+var windowWidth = window.innerHeight;
+
+    if (windowWidth > 400 && windowHeight > 600) {
+        var welcomeContent = "The rules are simple.  The rock represents evolution. Evolution always wins, except for paper which represents the human (Anthropecene) impact on the planet and the scissors represent the ability of the planet to recover from human behavior because scissors cuts paper. You can try your luck as often as you want, clicking each bubble below. Reset if you want.  Check console for output.";
+    } else {
+        var welcomeContent = "Rule are: play the game clicking the buttons.";
+    }
 
 
 var rock = document.getElementById('rock');
@@ -17,7 +24,6 @@ function displayRules() {
   var button = document.getElementById('button');
   button.style.visibility = 'hidden';
 }
-
 
 function button2() {
   var msg = 'button2';
@@ -138,11 +144,9 @@ function runGamePaper() {
   paper.style.visibility = 'visible';
 }
 
-
 function runGameScissors() {
 
   var x = Math.random();
-
   if (x > 0 && x < 1/3) {
     x = 'rock';
     console.log(`computer draws rock`)
@@ -183,6 +187,7 @@ function runGameScissors() {
 
   var scissors = document.getElementById('scissors');
   scissors.style.visibility = 'visible';
+
 }
 
 

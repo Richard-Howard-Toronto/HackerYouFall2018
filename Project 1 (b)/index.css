@@ -26,6 +26,10 @@ button {
     cursor: auto;
 }
 
+button:hover {
+  background-color: rgb(116, 111, 181);
+}
+
 #displayRules {
   border-radius: 20px;
   border: none;
@@ -54,3 +58,45 @@ button {
 .button3 {border-radius: 50%;}
 .button4 {border-radius: 50%;}
 .button5 {border-radius: 50%;}
+
+footer {
+    position: fixed;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    bottom: 5px;
+    width: 90%;
+    background-color: rgb(126, 151, 191);
+    color: white;
+    text-align: center;
+    border-radius: 100px;
+}
+
+@media screen and (max-width: 700px) {
+
+    #displayRules {
+      border-radius: 5px;
+      border: none;
+      color: white;
+      padding: 5px 5px;
+      font-size: 15px;
+      cursor: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 18px;
+      color: black;
+    }
+
+    h2, button {
+        text-align: center;
+        font-size: 15px;
+        color: black;
+        padding: 10px 20px;
+    }
+
+    footer {
+      visibility: hidden;
+    }
+}
