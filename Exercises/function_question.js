@@ -17,23 +17,29 @@ function passToValue() {
 passToValue();
 
 
-//Take the above code and pass in an argument in FUNCTION passInValue and it stops working.  You executive the first function but then when you try to run the second, the return value for x1 and y1 is NaN.  I have something in the wrong sequence.  But what?
+//Take the above code and pass in an argument in FUNCTION passInValue and it stops working.  
 
 
 
-console.log('----this returns NaN ----')
+console.log('----this works too ----')
 
 function passFromValue1(numberYouChangeALot1){
     var x1 = 20 * numberYouChangeALot1;
-    console.log(`pass from ${x1}`);
+    console.log(`pass from x1 ${x1}`);
     return x1;
 }
 
-passFromValue1(10);
+function intermediateValue(num2) {
+  var w = 12 * num2;
+  console.log(`pass from w ${w}`);
+  return w;
+}
 
 function passToValue1() {
-    var y1 = passFromValue1();
-    console.log(`pass to ${y1}`);
+    var y1 = passFromValue1(100);
+    console.log(`pass from x1 to y1 ${y1}`);
+    var y1 = passFromValue1(100) * intermediateValue(2);
+    console.log(`pass to x1 and w to y1 ${y1}`);
 }
 
 passToValue1();
