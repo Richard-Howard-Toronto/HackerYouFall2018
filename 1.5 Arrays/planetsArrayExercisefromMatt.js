@@ -121,5 +121,6 @@ console.log('-------next question');
   let maxGravityArray = [];
   planets.forEach(planet => {
     maxGravityArray.push(planet.gravity);
+      
   });
   console.log(`max gravity is ${Math.max(...maxGravityArray)}`);

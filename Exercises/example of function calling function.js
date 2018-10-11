@@ -17,7 +17,7 @@ function passToValue() {
 passToValue();
 
 
-//Take the above code and pass in an argument in FUNCTION passInValue and it stops working.  
+//Take the above code and pass in an argument in FUNCTION passInValue and it stops working.
 
 
 
@@ -30,8 +30,8 @@ function passFromValue1(numberYouChangeALot1){
 }
 
 function intermediateValue(num2) {
-  var w = 12 * num2;
-  console.log(`pass from w ${w}`);
+  var w = 12 * passFromValue1(100);
+  console.log(`pass from value1 to w ${w}`);
   return w;
 }
 
@@ -39,7 +39,7 @@ function passToValue1() {
     var y1 = passFromValue1(100);
     console.log(`pass from x1 to y1 ${y1}`);
     var y1 = passFromValue1(100) * intermediateValue(2);
-    console.log(`pass to x1 and w to y1 ${y1}`);
+    console.log(`pass from x1 and w to y1 ${y1}`);
 }
 
 passToValue1();
