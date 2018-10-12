@@ -14,13 +14,11 @@
 
 
     <div class="button">
-      <button class="buttonClass" onclick="reFresh()">Click to calculate heads and tails (reloads everything using the document.reload())</button>
+      <button class="buttonClass" onclick="reFresh()">Click to calculate heads and tails. Reloads everything using the document.reload()function</button>
     </div>
 
     <div class="center">
-
         <div class="message_container">
-
               <div class="message">Max Heads
                 <span id="output1">output</span>
               </div>
@@ -33,16 +31,31 @@
               <div class="message">Min Tails
                 <span id="output4">output</span>
               </div>
-
         </div>
-</div>
+    </div>
 
 <div class="button">
-  <button class="buttonClass" onclick="tryitout()">Example</button>
+  <button class="buttonClass" onclick="tryitout()">Click for random  1000 coin flips.</button>
 </div>
 
-<footer>Project 1 - October 2018</footer>
+    <div class="center">
+        <div class="message_container">
+              <div class="message">
+                <span id="output5">average</span>
+              </div>
+              <div class="message">
+                <span id="output6">standard deviation</span>
+              </div>
+              <div class="message">
+                <span id="output7">lowerBound</span>
+              </div>
+              <div class="message">
+                <span id="output8">upperBound</span>
+              </div>
+        </div>
+    </div>
 
+<footer id="footerdate"></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="project_1_coin_flip.js"></script>
   </body>

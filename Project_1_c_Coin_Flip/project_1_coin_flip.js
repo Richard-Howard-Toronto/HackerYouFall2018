@@ -1,6 +1,8 @@
 // $(document).ready(function(){
 //     // your code here
 // });
+
+
 function reFresh() {
    location.reload();
 }
@@ -119,7 +121,7 @@ function tryitout() {
     var avgSquareDiff = average(squareDiffs);
 
     var stdDev = Math.sqrt(avgSquareDiff);
-    console.log(`one std dev is ${stdDev}`)
+    stdDev = Math.round(stdDev*1000)/1000
     return stdDev;
   } // end of function
 
@@ -132,12 +134,14 @@ function tryitout() {
 
   function calcCIs() {
     var stdDev_a = standardDeviation(values);
+    $('span#output6').text(`std dev: ${stdDev_a}`);
     var average_a = average(values);
     var lowerBound = average_a - stdDev_a;
+    lowerBound = Math.round(lowerBound*1000)/1000;
     var upperBound = average_a + stdDev_a;
-    console.log(`lowerbound is ${lowerBound}`)
-    console.log(`upperbound is ${upperBound}`)
-
+    upperBound = Math.round(upperBound*1000)/1000;
+    $('span#output7').text(`lowerBound: ${lowerBound}`);
+    $('span#output8').text(`upperBound: ${upperBound}`);
   }
 
   calcCIs();
@@ -147,10 +151,15 @@ function tryitout() {
       let avgdogs = 0;
       values.forEach((dog) => {
           sumdogs += dog;
-          avgdogs = sumdogs/values.length;
+          avgdogs = Math.round((sumdogs/values.length)*1000)/1000;
       });
 
-      console.log(`sum is ${sumdogs}, the sum of the flips`);
-      console.log(`avg is ${avgdogs}, the 50/50 flip`);
-
+      $('span#output5').text(`average: ${avgdogs}`);
   }
+
+
+
+// dates and stuff
+
+var today = new Date();
+$('footer#footerdate').text(`${today}`);
