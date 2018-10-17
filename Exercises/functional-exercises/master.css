@@ -1,0 +1,21 @@
+body {
+  background-color: whitesmoke;
+}
+
+ol {
+  border: 10px;
+  margin: 20px;
+}
+
+li {
+  border-radius: 20px;
+  border: solid;
+  text-align: center;
+  font-size: 30px;
+}
+
+h3 {
+  text-align: left;
+  font-size: 20px;
+  background-color: lightgreen;
+}
